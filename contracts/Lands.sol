@@ -47,5 +47,12 @@ contract Lands {
     return users[index];
   }
 
+  function getUser(address _address) public view returns(uint index, string message) {
+    return (
+      userStructs[_address].index,
+      userStructs[_address].message
+    );
+  }
+
 
 }

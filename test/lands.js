@@ -54,4 +54,21 @@ contract(`Lands with one user from account #2`, accounts => {
 
     assert.equal(actual, expected)
   })
+
+  it('should get the user details from its address', async () => {
+    const details = await instance.getUser(acct2)
+    const [index, message] = details
+
+    const actual = {
+      index: index.toNumber(),
+      message
+    }
+
+    const expected = {
+      index: 1,
+      message: 'hello Smith'
+    }
+
+    assert.deepEqual(actual, expected)
+  })
 })
