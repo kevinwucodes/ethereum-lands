@@ -26,7 +26,7 @@ contract Lands {
   function Lands() {
   }
 
-  function createUser(string _message) returns(uint) {
+  function createUser(string _message) public returns(uint) {
     userStructs[msg.sender].index = users.push(msg.sender);
     /*userStructs[msg.sender].polygonCoords = _polygonCoords;*/
     userStructs[msg.sender].message = _message;
@@ -43,9 +43,9 @@ contract Lands {
     return users.length;
   }
 
-  /*function getUserAtIndex(uint index) public view returns(address) {
-    return
-  }*/
+  function getUserAddress(uint index) public view returns(address) {
+    return users[index];
+  }
 
 
 }
