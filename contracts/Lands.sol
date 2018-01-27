@@ -1,6 +1,8 @@
 pragma solidity ^0.4.18;
 
-contract Lands {
+import "./Shoelace.sol";
+
+contract Lands is Shoelace {
 
   struct UserStruct {
     // the index is how we track the user in userIndex array
@@ -34,6 +36,8 @@ contract Lands {
     createUserEvent(userStructs[msg.sender].index);
     return userStructs[msg.sender].index;
   }
+
+
 
   /********************
    * GETTERS

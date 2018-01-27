@@ -35,11 +35,12 @@ contract('Shoelace Theorem', account => {
     }
   })
 
-  it('should be good with 6 coordinates', async () => {
-    const coords = [1, 2, 3, 4, 5, 6]
+  it('should be good with 10 coordinates', async () => {
+    const coords = [3, 4, 5, 11, 12, 8, 9, 5, 5, 6]
 
     try {
       const result = await instance.shoelace(coords)
+      console.log('result', result)
 
       const actual = result
       const expected = true
@@ -48,5 +49,9 @@ contract('Shoelace Theorem', account => {
     } catch (e) {
       throw Error('not suppose to be here')
     }
+  })
+
+  it('should be good with 6 coordinates', async () => {
+    const coords = [3, 4, 5, 11, 12, 8]
   })
 })

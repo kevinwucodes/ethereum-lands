@@ -1,5 +1,29 @@
 # Ethereum Lands
 
+
+# TODO
+* solve the problem where someone owns a chunk of area.  How would you calculate the already owned area for every owner without burning through a ton of gas?  Use an oracle service to do this... 
+
+
+0x456642342342 => {
+  "coordinates": [
+    [1,2],
+    [3,4],
+    [56,44]
+  ]
+}
+
+0x7d77e7349BFE929292D => {
+  "coordinates": [
+    [88, 44],
+    [100,677],
+    [345, 67]
+  ]
+}
+
+do any of these coordinates intersect at all?
+
+
 # Contract Storage requirements
 
 Shapefile example:
